@@ -90,7 +90,7 @@ namespace MarketYönetimSistemi
         private void updateProductList()
         {
             sqlConnection.Open();
-            sqlDataAdapter = new SqlDataAdapter("select P.Id,P.Image,P.Name,P.Description,P.Price,P.Stock,P.IsStatus, C.Name as 'Category Name' from Products P left join Categories C on P.Name = C.Name", sqlConnection);
+            sqlDataAdapter = new SqlDataAdapter("select P.Id,P.Image,P.Name,P.Description,P.Price,P.Stock,P.IsStatus, C.Name as 'Category_Name' from Products P left join Categories C on P.Name = C.Name", sqlConnection);
 
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
@@ -277,7 +277,8 @@ namespace MarketYönetimSistemi
             sqlConnection.Close();
         }
 
-   
+       
+
 
 
 
